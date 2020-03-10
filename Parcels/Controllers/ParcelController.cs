@@ -17,10 +17,10 @@ namespace Parcels.Controllers
     public ActionResult AddParcelForm() { return View(); }
 
     [HttpPost("/DisplayParcel")]
-    public ActionResult AddParcelForm(int height, int width, int length, int weight)
+    public ActionResult AddParcelForm(int length, int width, int weight, int height, int volume)
     {
-      Parcel newParcel = new Parcel(height, width, length, weight);
-      int cost = newParcel.GetCost();
+      Parcel newParcel = new Parcel(length, width, weight, height, volume);
+      double cost = newParcel.GetCost();
     }
     [HttpGet("/DisplayParcel")]
     public ActionResult DisplayParcel()
