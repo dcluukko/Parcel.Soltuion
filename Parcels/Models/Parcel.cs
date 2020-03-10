@@ -12,13 +12,12 @@ namespace Parcels.Models
     public int Volume { get; set; }
     public static List<Parcel> ParcelItems = new List<Parcel>() {};
 
-    public Parcel(int length, int width, int weight, int height, int volume)
+    public Parcel(int length, int width, int weight, int height)
     {
       Length = length;
       Width = width;
       Weight = weight;
       Height = height;
-      Volume = volume;
       ParcelItems.Add(this);
     }
     public int GetVolume()
@@ -36,6 +35,10 @@ namespace Parcels.Models
     public static List<Parcel> ShowParcel()
     {
       return ParcelItems;
+    }
+    public static void ClearParcel()
+    {
+      ParcelItems.Clear();
     }
   } 
 }
