@@ -21,14 +21,6 @@ namespace Parcels.Models
       ParcelItems.Add(this);
     }
 
-    public Parcel(int width, int height, int length, int weight, int volume, double cost)
-     : this(width, height, length, weight)
-    {
-      Volume = volume;
-      Cost = cost;
-      ParcelItems.Add(this);
-    }
-
     public int GetVolume()
     {
       int volume = Width * Length * Height;
